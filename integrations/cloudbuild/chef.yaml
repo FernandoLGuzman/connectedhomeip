@@ -50,16 +50,16 @@ steps:
       waitFor:
           - CompileNoip
 
-logsBucket: matter-build-automation-build-logs
+# logsBucket: matter-build-automation-build-logs
 
 # Global timeout for all steps
 timeout: 18000s
 queueTtl: 21600s
 
-artifacts:
-    objects:
-        location: "gs://matter-build-automation-artifacts/$PROJECT_ID/$COMMIT_SHA/"
-        paths: ["/workspace/artifacts/*.tar.gz"]
+# artifacts:
+#     objects:
+#         location: "gs://matter-build-automation-artifacts/$PROJECT_ID/$COMMIT_SHA/"
+#         paths: ["/workspace/artifacts/*.tar.gz"]
 # Using higher CPU machines generally speeds up builds, except bootstrap is always
 # slow.
 options:
